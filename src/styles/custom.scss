@@ -1,0 +1,14 @@
+// Override default variables before the import
+$body-bg: #A9A9A9;
+
+// Import Bootstrap and its default variables
+@import '~bootstrap/scss/bootstrap.scss';
+
+.products-container {
+    .product-item {
+        text-align: center;
+        .product-image{
+            background: #fff;
+        }
+    }
+}

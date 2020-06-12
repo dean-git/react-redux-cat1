@@ -10,7 +10,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### Login
 
-Login with a valid id and password.  This will get you a full product listing.  Clicking on the products nav link will direct you to the product list but you will only get six products.
+Login with a valid email and password (one character will suffice).  This will get you a full product listing.  Clicking on the products nav link will direct you to the product list but you will only get six products.
 
 ## Available Scripts
 

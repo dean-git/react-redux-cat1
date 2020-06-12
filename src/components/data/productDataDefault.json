@@ -1,0 +1,32 @@
+[
+    {
+      "id": 0,
+      "name": "Blueberries",
+      "image": "/images/blueberries.jpg"
+    },
+    {
+      "id": 1,
+      "name": "Eggs",
+      "image": "/images/eggs.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Bread",
+      "image": "/images/bread.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Carrots",
+      "image": "/images/carrots.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Apples",
+      "image":"/images/green-apples.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Peppers",
+      "image": "/images/market-peppers.jpg"
+    }
+  ]

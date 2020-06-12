@@ -1,13 +1,8 @@
-import productData from '../../data/productData.json'
-// function getProducts() {
-//   return fetch("/products")
-//     .then(handleErrors)
-//     .then(res => res.json());
-// }
+import productData from '../../data/productData.json';
+import productDataDefault from '../../data/productDataDefault.json';
 
-function mockGetProducts() {
+function mockGetAllProducts(auth) {
   return new Promise(resolve => {
-    // Resolve after a timeout so we can see the loading indicator
     setTimeout(
       () =>
         resolve({
@@ -18,10 +13,27 @@ function mockGetProducts() {
   });
 }
 
-export function fetchProducts() {
+function mockGetDefaultProducts(auth) {
+  return new Promise(resolve => {
+    setTimeout(
+      () =>
+        resolve({
+          products: productDataDefault
+        }),
+      1000
+    );
+  });
+}
+
+export function fetchProducts(auth) {
   return dispatch => {
     dispatch(fetchProductsBegin());
-    return mockGetProducts()
+    return auth ? mockGetAllProducts(auth)
+      .then(json => {
+        dispatch(fetchProductsSuccess(json.products));
+        return json.products;
+      }) :
+      mockGetDefaultProducts(auth)
       .then(json => {
         dispatch(fetchProductsSuccess(json.products));
         return json.products;
@@ -31,14 +43,6 @@ export function fetchProducts() {
       );
   };
 }
-
-// Handle HTTP errors since fetch won't.
-// function handleErrors(response) {
-//   if (!response.ok) {
-//     throw Error(response.statusText);
-//   }
-//   return response;
-// }
 
 export const FETCH_PRODUCTS_BEGIN = "FETCH_PRODUCTS_BEGIN";
 export const FETCH_PRODUCTS_SUCCESS =

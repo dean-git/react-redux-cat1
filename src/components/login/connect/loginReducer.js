@@ -1,8 +1,8 @@
 import {
-  FETCH_PRODUCTS_BEGIN,
-  FETCH_PRODUCTS_SUCCESS,
-  FETCH_PRODUCTS_FAILURE
-} from "./productActions";
+  GET_USER_BEGIN,
+  GET_USER_SUCCESS,
+  GET_USER_FAILURE
+} from "./loginActions";
 
 const initialState = {
   items: [],
@@ -10,26 +10,26 @@ const initialState = {
   error: null
 };
 
-export default function productReducer(
+export default function loginReducer(
   state = initialState,
   action
 ) {
   switch (action.type) {
-    case FETCH_PRODUCTS_BEGIN:
+    case GET_USER_BEGIN:
       return {
         ...state,
         loading: true,
         error: null
       };
 
-    case FETCH_PRODUCTS_SUCCESS:
+    case GET_USER_SUCCESS:
       return {
         ...state,
         loading: false,
-        items: action.payload.products
+        items: action.payload.user
       };
 
-    case FETCH_PRODUCTS_FAILURE:
+    case GET_USER_FAILURE:
       return {
         ...state,
         loading: false,

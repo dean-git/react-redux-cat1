@@ -1,5 +1,17 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## App run details
+
+### Get started
+
+- Clone repo. 
+- `npm install` in root
+- `npm start` to start up dev.
+
+### Login
+
+Login with a valid id and password.  This will get you a full product listing.  Clicking on the products nav link will direct you to the product list but you will only get six products.
+
 ## Available Scripts
 
 In the project directory, you can run:

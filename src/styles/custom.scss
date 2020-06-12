@@ -4,11 +4,42 @@ $body-bg: #A9A9A9;
 // Import Bootstrap and its default variables
 @import '~bootstrap/scss/bootstrap.scss';
 
+.login-wrapper{
+    min-height: 100%; 
+    min-height: 100vh; 
+  
+    display: flex;
+    align-items: center;
+
+    .login-container {
+        margin-top: -48px;
+        .login-title {
+            text-align: center;
+            padding-bottom: 20px;
+        }
+    }
+}
+
 .products-container {
+    padding-top: 20px;
+    .products-title {
+        text-align: center;
+        padding-bottom: 20px;
+    }
     .product-item {
         text-align: center;
         .product-image{
             background: #fff;
         }
+    }
+}
+
+.loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    .loader-img {
+        height: 50px;
     }
 }
